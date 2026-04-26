@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing - Edukron</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Fraunces:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue-50:#eff6ff;--blue-100:#dbeafe;--blue-200:#bfdbfe;--blue-300:#93c5fd;
+  --blue-400:#60a5fa;--blue-500:#3b82f6;--blue-600:#2563eb;--blue-700:#1d4ed8;
+  --blue-800:#1e40af;--blue-900:#1e3a8a;--blue-950:#172554;
+  --ink:#0d1b4b;--white:#ffffff;
+  --gray-50:#f8faff;--gray-100:#f0f4ff;--gray-200:#e2e8f8;
+  --gray-400:#94a3b8;--gray-600:#4b5980;--gray-700:#334155;
+  --accent:#f59e0b;--accent-light:#fef3c7;
+  --green:#10b981;--green-light:#d1fae5;
+  --rose:#ef4444;--rose-light:#fee2e2;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#fff;color:var(--ink);overflow-x:hidden;line-height:1.6}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:#f0f4ff}
+::-webkit-scrollbar-thumb{background:var(--blue-300);border-radius:3px}
+
+/* TOP BAR */
+.top-bar{background:var(--blue-900);color:#fff;padding:0.5rem 5%;display:flex;align-items:center;justify-content:space-between;font-size:0.8rem}
+.top-announcement{font-weight:600}
+.top-contact{display:flex;gap:1rem}
+.top-social{display:flex;gap:0.5rem}
+.top-social a{color:#fff;text-decoration:none;font-size:0.9rem;padding:0.2rem;transition:opacity 0.2s}
+.top-social a:hover{opacity:0.7}
+
+/* NAV */
+nav{position:fixed;top:40px;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:72px;background:rgba(255,255,255,0.93);backdrop-filter:blur(20px);border-bottom:1px solid var(--blue-100);box-shadow:0 1px 0 rgba(37,99,235,0.07)}
+.logo{font-family:'Fraunces',serif;font-weight:900;font-size:1.6rem;color:var(--blue-800);text-decoration:none;letter-spacing:-0.03em}
+.logo span{color:var(--blue-500)}
+.nav-links{display:flex;gap:0;list-style:none}
+.nav-links a{text-decoration:none;color:var(--gray-600);font-size:0.9rem;font-weight:500;padding:0.5rem 1.1rem;border-radius:8px;transition:color 0.2s,background 0.2s}
+.nav-links a:hover{color:var(--blue-600);background:var(--blue-50)}
+.nav-links a.highlight{background:var(--accent);color:#fff}
+.nav-links a.highlight:hover{background:var(--accent);color:#fff;transform:scale(1.05)}
+.nav-links a.premium{position:relative}
+.nav-links a.premium::after{content:'Premium';position:absolute;top:-8px;right:-8px;background:var(--blue-600);color:#fff;font-size:0.6rem;padding:0.1rem 0.3rem;border-radius:3px;font-weight:700}
+.nav-right{display:flex;align-items:center;gap:0.75rem}
+.btn-outline{padding:0.5rem 1.25rem;border:1.5px solid var(--blue-200);border-radius:8px;color:var(--blue-600);background:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.875rem;font-weight:600;cursor:pointer;transition:all 0.2s;text-decoration:none}
+.btn-outline:hover{border-color:var(--blue-500);background:var(--blue-50)}
+.btn-solid{padding:0.55rem 1.4rem;border:none;border-radius:8px;background:var(--blue-600);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.875rem;font-weight:600;cursor:pointer;transition:all 0.2s;text-decoration:none}
+.btn-solid:hover{background:var(--blue-700);transform:translateY(-1px);box-shadow:0 4px 12px rgba(37,99,235,0.35)}
+
+/* PRICING */
+.price-sec{padding:6rem 5% 4rem;padding-top:calc(6rem + 112px)}
+.p-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.pcard{border:1.5px solid var(--blue-100);border-radius:20px;padding:2.5rem 2rem;transition:transform 0.2s}
+.pcard:hover{transform:translateY(-4px)}
+.pcard.featured{border-color:var(--blue-600);background:var(--blue-600);color:#fff;box-shadow:0 16px 48px rgba(37,99,235,0.3)}
+.pc-badge{display:inline-block;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:var(--accent-light);color:#92400e;padding:0.2rem 0.6rem;border-radius:5px;margin-bottom:1.25rem}
+.pname{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:900;margin-bottom:0.5rem;letter-spacing:-0.02em}
+.pdesc{font-size:0.85rem;color:var(--gray-400);margin-bottom:2rem;line-height:1.6}
+.pcard.featured .pdesc{color:rgba(255,255,255,0.65)}
+.pval{font-family:'Fraunces',serif;font-size:3rem;font-weight:900;letter-spacing:-0.04em;line-height:1}
+.pval sub{font-size:1.2rem;vertical-align:bottom;font-family:'Plus Jakarta Sans',sans-serif;font-weight:400}
+.pper{font-size:0.82rem;color:var(--gray-400);margin:0.25rem 0 2rem}
+.pcard.featured .pper{color:rgba(255,255,255,0.6)}
+.pfeats{list-style:none;display:flex;flex-direction:column;gap:0.75rem;margin-bottom:2rem}
+.pfeat{display:flex;align-items:center;gap:0.65rem;font-size:0.875rem}
+.pfeat-i{width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.65rem;flex-shrink:0;background:var(--green-light);color:var(--green)}
+.pcard.featured .pfeat-i{background:rgba(255,255,255,0.15);color:#fff}
+.pcard.featured .pfeat{color:rgba(255,255,255,0.9)}
+.pcta{width:100%;padding:0.85rem;border-radius:10px;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.95rem;font-weight:700;cursor:pointer;transition:all 0.2s;border:1.5px solid var(--blue-200);background:#fff;color:var(--blue-600)}
+.pcta:hover{background:var(--blue-50)}
+.pcta.wt{background:#fff;color:var(--blue-700);border:none}
+.pcta.wt:hover{background:var(--blue-50)}
+
+/* FOOTER */
+footer{background:var(--ink);padding:4rem 5% 2.5rem;display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr 1fr;gap:3rem}
+.ft-logo{font-family:'Fraunces',serif;font-weight:900;font-size:1.6rem;color:#fff;text-decoration:none;letter-spacing:-0.03em;display:inline-block;margin-bottom:1rem}
+.ft-logo span{color:var(--blue-400)}
+.ft-tag{font-size:0.875rem;color:rgba(255,255,255,0.4);line-height:1.7;max-width:220px;margin-bottom:1.5rem}
+.social-row{display:flex;gap:0.6rem}
+.soc{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
+.soc:hover{background:var(--blue-600);border-color:var(--blue-600);color:#fff}
+.ft-col h4{font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:1.25rem}
+.ft-links{list-style:none;display:flex;flex-direction:column;gap:0.65rem}
+.ft-links a{text-decoration:none;font-size:0.875rem;color:rgba(255,255,255,0.5);transition:color 0.2s}
+.ft-links a:hover{color:#fff}
+.ft-bot{grid-column:1/-1;border-top:1px solid rgba(255,255,255,0.08);padding-top:1.75rem;margin-top:0.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.ft-copy{font-size:0.8rem;color:rgba(255,255,255,0.3)}
+.ft-legal{display:flex;gap:1.5rem}
+.ft-legal a{font-size:0.8rem;color:rgba(255,255,255,0.3);text-decoration:none;transition:color 0.2s}
+.ft-legal a:hover{color:rgba(255,255,255,0.7)}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  .p-grid{grid-template-columns:1fr}
+}
+
+/* STICKY CTA */
+.sticky-cta{position:fixed;bottom:20px;right:20px;z-index:300;background:var(--blue-600);color:#fff;padding:0.75rem 1.5rem;border-radius:50px;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.9rem;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:0.5rem;box-shadow:0 4px 20px rgba(37,99,235,0.4);transition:transform 0.2s}
+.sticky-cta:hover{transform:scale(1.05)}
+
+/* FLOATING WHATSAPP */
+.floating-whatsapp{position:fixed;bottom:80px;right:20px;z-index:300;width:56px;height:56px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.5rem;text-decoration:none;box-shadow:0 4px 20px rgba(0,0,0,0.2);transition:transform 0.2s}
+.floating-whatsapp:hover{transform:scale(1.1)}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="top-announcement">🎓 Free Demo Available – Register Now</div>
+  <div class="top-contact">
+    <span>+91-XXXXXXXXXX</span>
+    <span>info@edukron.com</span>
+  </div>
+  <div class="top-social">
+    <a href="https://www.youtube.com/@edukron" target="_blank">📺</a>
+    <a href="https://www.instagram.com/edukron" target="_blank">📷</a>
+    <a href="https://www.linkedin.com/company/edukron" target="_blank">💼</a>
+    <a href="https://www.facebook.com/edukron" target="_blank">📘</a>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="logo">Edu<span>kron</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#" class="highlight">Super 40</a></li>
+    <li><a href="#" class="premium">Edukron Apex</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Contact Us</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="#" class="btn-outline">Log in</a>
+    <a href="#" class="btn-solid">Start free →</a>
+  </div>
+</nav>
+
+<!-- PRICING -->
+<section class="price-sec" id="pricing">
+  <div style="text-align:center;max-width:540px;margin:0 auto">
+    <div class="eyebrow">Simple pricing</div>
+    <h2 class="sec-title">Plans for every stage of your journey</h2>
+    <p class="sec-sub" style="margin:0 auto;text-align:center">Start free. Upgrade when you're ready. Cancel anytime.</p>
+  </div>
+  <div class="p-grid">
+    <div class="pcard">
+      <div class="pname">Starter</div>
+      <div class="pdesc">Explore Edukron before committing to a paid plan.</div>
+      <div class="pval"><sub>₹</sub>0</div>
+      <div class="pper">Free forever</div>
+      <ul class="pfeats">
+        <li class="pfeat"><div class="pfeat-i">✓</div>5 free courses</li>
+        <li class="pfeat"><div class="pfeat-i">✓</div>AI coach (limited)</li>
+        <li class="pfeat"><div class="pfeat-i">✓</div>Community access</li>
+        <li class="pfeat"><div class="pfeat-i">✓</div>1 project review</li>
+      </ul>
+      <button class="pcta">Get started free</button>
+    </div>
+    <div class="pcard featured">
+      <div class="pc-badge">Most popular</div>
+      <div class="pname" style="color:#fff">Pro</div>
+      <div class="pdesc">For serious learners ready to make a career move.</div>
+      <div class="pval" style="color:#fff"><sub>₹</sub>799</div>
+      <div class="pper">per month, billed annually</div>
+      <ul class="pfeats">
+        <li class="pfeat"><div class="pfeat-i">✓</div>All 320+ courses</li>
+        <li class="pfeat"><div class="pfeat-i">✓</div>Unlimited AI coaching</li>
+        <li class="pfeat"><div class="pfeat-i">✓</div>Live weekly sessions</li>
+        <li class="pfeat"><div class="pfeat-i">✓</div>Unlimited project reviews</li>
+        <li class="pfeat"><div class="pfeat-i">✓</div>Verified certificates</li>
+        <li class="pfeat"><div class="pfeat-i">✓</div>Career coaching</li>
+      </ul>
+      <button class="pcta wt">Start 14-day free trial</button>
+    </div>
+    <div class="pcard">
+      <div class="pname">Enterprise</div>
+      <div class="pdesc">For teams scaling upskilling at speed across their organisation.</div>
+      <div class="pval" style="font-size:2rem">Custom</div>
+      <div class="pper">Contact us for a quote</div>
+      <ul class="pfeats">
+        <li class="pfeat"><div class="pfeat-i">✓</div>Everything in Pro</li>
+        <li class="pfeat"><div class="pfeat-i">✓</div>Custom learning paths</li>
+        <li class="pfeat"><div class="pfeat-i">✓</div>Admin dashboard</li>
+        <li class="pfeat"><div class="pfeat-i">✓</div>SSO &amp; SCIM provisioning</li>
+        <li class="pfeat"><div class="pfeat-i">✓</div>Dedicated success manager</li>
+        <li class="pfeat"><div class="pfeat-i">✓</div>SLA &amp; compliance support</li>
+      </ul>
+      <button class="pcta">Talk to sales →</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <a href="index.html" class="ft-logo">Edu<span>kron</span></a>
+    <p class="ft-tag">Learn beyond limits. Build skills that matter. Launch a career you love.</p>
+    <div class="social-row">
+      <a href="https://www.youtube.com/@edukron" class="soc" target="_blank">📺</a>
+      <a href="https://www.instagram.com/edukron" class="soc" target="_blank">📷</a>
+      <a href="https://www.linkedin.com/company/edukron" class="soc" target="_blank">💼</a>
+      <a href="https://www.facebook.com/edukron" class="soc" target="_blank">📘</a>
+    </div>
+  </div>
+  <div class="ft-col">
+    <h4>Learn</h4>
+    <ul class="ft-links">
+      <li><a href="courses.html">All courses</a></li>
+      <li><a href="#">Learning paths</a></li>
+      <li><a href="#">Certifications</a></li>
+      <li><a href="#">Live classes</a></li>
+      <li><a href="#">Free resources</a></li>
+    </ul>
+  </div>
+  <div class="ft-col">
+    <h4>Company</h4>
+    <ul class="ft-links">
+      <li><a href="#">About Edukron</a></li>
+      <li><a href="instructors.html">Instructors</a></li>
+      <li><a href="#">Careers</a></li>
+      <li><a href="#">Press kit</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+  </div>
+  <div class="ft-col">
+    <h4>For business</h4>
+    <ul class="ft-links">
+      <li><a href="pricing.html">Enterprise</a></li>
+      <li><a href="#">Become an instructor</a></li>
+      <li><a href="#">Hiring partners</a></li>
+      <li><a href="#">API &amp; integrations</a></li>
+    </ul>
+  </div>
+  <div class="ft-col">
+    <h4>Support</h4>
+    <ul class="ft-links">
+      <li><a href="faq.html">Help centre</a></li>
+      <li><a href="#">Community forum</a></li>
+      <li><a href="#">Contact us</a></li>
+      <li><a href="#">System status</a></li>
+    </ul>
+  </div>
+  <div class="ft-bot">
+    <span class="ft-copy">© 2026 Edukron Technologies Pvt. Ltd. · Made in Bengaluru 🇮🇳</span>
+    <div class="ft-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Cookie Settings</a>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY CTA -->
+<a href="#" class="sticky-cta">Enroll Now →</a>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/91XXXXXXXXXX" class="floating-whatsapp" target="_blank">💬</a>
+
+</body>
+</html>
