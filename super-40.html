@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Instructors - Edukron</title>
+<title>Super 40 Program - Edukron</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Fraunces:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -64,18 +64,33 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:200;display:flex;align-items:
 .btn-solid{padding:0.55rem 1.4rem;border:none;border-radius:8px;background:var(--blue-600);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.875rem;font-weight:600;cursor:pointer;transition:all 0.2s;text-decoration:none}
 .btn-solid:hover{background:var(--blue-700);transform:translateY(-1px);box-shadow:0 4px 12px rgba(37,99,235,0.35)}
 
-/* INSTRUCTORS */
-.inst-sec{padding:6rem 5% 4rem;padding-top:calc(6rem + 112px)}
-.inst-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3rem}
-.icard{background:#fff;border:1px solid var(--blue-100);border-radius:18px;padding:2rem 1.5rem;text-align:center;transition:transform 0.2s,box-shadow 0.2s;cursor:default}
-.icard:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(30,58,138,0.1)}
-.iav{width:72px;height:72px;border-radius:50%;margin:0 auto 1rem;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:1.5rem;font-weight:900;color:#fff;font-style:italic}
-.iname{font-family:'Fraunces',serif;font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:0.2rem}
-.irole{font-size:0.8rem;color:var(--blue-500);font-weight:600;margin-bottom:0.25rem}
-.ico{font-size:0.78rem;color:var(--gray-400);margin-bottom:1rem}
-.istats{display:flex;justify-content:center;gap:1.5rem}
-.is-v{font-weight:700;font-size:0.9rem;color:var(--blue-700)}
-.is-k{font-size:0.7rem;color:var(--gray-400)}
+/* PAGE HERO */
+.page-hero{min-height:50vh;padding-top:160px;padding-bottom:60px;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(160deg,#fff 55%,var(--blue-50) 100%);position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;top:-120px;right:-80px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(59,130,246,0.1) 0%,transparent 70%);pointer-events:none}
+.ph-content{position:relative;z-index:1;max-width:800px}
+.page-hero .eyebrow{display:inline-block;margin-bottom:1rem}
+.page-hero h1{font-family:'Fraunces',serif;font-size:clamp(2.2rem,4vw,3.5rem);font-weight:900;letter-spacing:-0.03em;color:var(--ink);margin-bottom:1rem;line-height:1.1}
+.page-hero .page-subtitle{font-size:1.05rem;color:var(--gray-600);max-width:600px;margin:0 auto 2rem;line-height:1.75}
+.page-cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-lg{padding:0.9rem 2.25rem;background:var(--blue-600);color:#fff;border:none;border-radius:10px;font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:all 0.2s;text-decoration:none;display:inline-block;box-shadow:0 4px 20px rgba(37,99,235,0.3)}
+.btn-lg:hover{background:var(--blue-700);transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,99,235,0.38)}
+.btn-ghost-lg{padding:0.9rem 2rem;background:transparent;color:var(--blue-600);border:2px solid var(--blue-600);border-radius:10px;font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:all 0.2s;text-decoration:none;display:inline-flex;align-items:center;gap:0.4rem}
+.btn-ghost-lg:hover{background:var(--blue-50);border-color:var(--blue-700);color:var(--blue-700)}
+
+/* CONTENT SECTION */
+.content-sec{padding:5rem 5%;max-width:1200px;margin:0 auto}
+.content-sec h2{font-family:'Fraunces',serif;font-size:2.2rem;font-weight:900;color:var(--ink);margin-bottom:2rem;letter-spacing:-0.02em}
+.content-sec p{font-size:1rem;color:var(--gray-600);line-height:1.8;margin-bottom:1.5rem}
+
+/* PROGRAMS GRID */
+.prog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin:3rem 0}
+.prog-card{background:#fff;border:1.5px solid var(--blue-100);border-radius:16px;padding:2rem;transition:all 0.3s}
+.prog-card:hover{border-color:var(--blue-300);box-shadow:0 12px 40px rgba(30,58,138,0.1);transform:translateY(-4px)}
+.prog-icon{font-size:2.5rem;margin-bottom:1rem}
+.prog-card h3{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:0.75rem}
+.prog-card p{font-size:0.95rem;color:var(--gray-600);margin-bottom:1.5rem}
+.prog-card a{display:inline-block;padding:0.65rem 1.5rem;background:var(--blue-600);color:#fff;text-decoration:none;border-radius:8px;font-weight:600;transition:all 0.2s;font-size:0.9rem}
+.prog-card a:hover{background:var(--blue-700);transform:translateX(2px)}
 
 /* FOOTER */
 footer{background:var(--ink);padding:4rem 5% 2.5rem;display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr 1fr;gap:3rem}
@@ -95,14 +110,6 @@ footer{background:var(--ink);padding:4rem 5% 2.5rem;display:grid;grid-template-c
 .ft-legal a{font-size:0.8rem;color:rgba(255,255,255,0.3);text-decoration:none;transition:color 0.2s}
 .ft-legal a:hover{color:rgba(255,255,255,0.7)}
 
-/* RESPONSIVE */
-@media(max-width:960px){
-  .inst-grid{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:600px){
-  .inst-grid{grid-template-columns:1fr}
-}
-
 /* STICKY CTA */
 .sticky-cta{position:fixed;bottom:20px;right:20px;z-index:300;background:var(--blue-600);color:#fff;padding:0.75rem 1.5rem;border-radius:50px;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.9rem;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:0.5rem;box-shadow:0 4px 20px rgba(37,99,235,0.4);transition:transform 0.2s}
 .sticky-cta:hover{transform:scale(1.05)}
@@ -110,6 +117,13 @@ footer{background:var(--ink);padding:4rem 5% 2.5rem;display:grid;grid-template-c
 /* FLOATING WHATSAPP */
 .floating-whatsapp{position:fixed;bottom:80px;right:20px;z-index:300;width:56px;height:56px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.5rem;text-decoration:none;box-shadow:0 4px 20px rgba(0,0,0,0.2);transition:transform 0.2s}
 .floating-whatsapp:hover{transform:scale(1.1)}
+
+@media(max-width:768px){
+  .page-hero{padding-top:120px}
+  .content-sec{padding:3rem 5%}
+  .prog-grid{grid-template-columns:1fr}
+  footer{grid-template-columns:1fr;gap:2rem}
+}
 </style>
 </head>
 <body>
@@ -147,65 +161,65 @@ footer{background:var(--ink);padding:4rem 5% 2.5rem;display:grid;grid-template-c
       </div>
     </li>
     <li class="nav-item">
-      <a href="#super40" class="highlight has-dropdown">🎯 Super 40</a>
+      <a href="super-40.html" class="highlight has-dropdown">🏆 Super 40</a>
       <div class="nav-dropdown">
         <div class="nav-section">
           <h4>Data & AI Programs</h4>
-          <a href="#">Data Science</a>
-          <a href="#">Data Engineering</a>
-          <a href="#">Generative AI</a>
-          <a href="#">Agentic AI</a>
+          <a href="super-40/data-science.html">Data Science</a>
+          <a href="super-40/data-engineering.html">Data Engineering</a>
+          <a href="super-40/generative-ai.html">Generative AI</a>
+          <a href="super-40/agentic-ai.html">Agentic AI</a>
         </div>
         <div class="nav-section">
           <h4>Azure Programs</h4>
-          <a href="#">Azure Data Engineering</a>
-          <a href="#">Azure DevOps</a>
+          <a href="super-40/azure-data-engineering.html">Azure Data Engineering</a>
+          <a href="super-40/azure-devops.html">Azure DevOps</a>
         </div>
         <div class="nav-section">
           <h4>AWS Programs</h4>
-          <a href="#">AWS Data Engineering</a>
-          <a href="#">AWS DevOps</a>
+          <a href="super-40/aws-data-engineering.html">AWS Data Engineering</a>
+          <a href="super-40/aws-devops.html">AWS DevOps</a>
         </div>
         <div class="nav-section">
           <h4>Common Sections</h4>
-          <a href="#">Program Overview</a>
-          <a href="#">Eligibility Criteria</a>
-          <a href="#">Selection Process</a>
-          <a href="#">Curriculum</a>
-          <a href="#">Daily Schedule</a>
-          <a href="#">Real-Time Projects</a>
-          <a href="#">Placement Program</a>
-          <a href="#">Hiring Partners</a>
-          <a href="#">Success Stories</a>
-          <a href="#">FAQs</a>
+          <a href="super-40/program-overview.html">Program Overview</a>
+          <a href="super-40/eligibility.html">Eligibility Criteria</a>
+          <a href="super-40/selection-process.html">Selection Process</a>
+          <a href="super-40/curriculum.html">Curriculum</a>
+          <a href="super-40/daily-schedule.html">Daily Schedule</a>
+          <a href="super-40/projects.html">Real-Time Projects</a>
+          <a href="super-40/placement-program.html">Placement Program</a>
+          <a href="super-40/hiring-partners.html">Hiring Partners</a>
+          <a href="super-40/success-stories.html">Success Stories</a>
+          <a href="super-40/faq.html">FAQs</a>
         </div>
       </div>
     </li>
     <li class="nav-item">
-      <a href="#apex" class="premium has-dropdown">🧠 Edukron Apex</a>
+      <a href="edukron-apex.html" class="premium has-dropdown">🧠 Edukron Apex</a>
       <div class="nav-dropdown">
         <div class="nav-section">
           <h4>PG Diploma Programs</h4>
-          <a href="#">PG Diploma in Data Science, ML & AI</a>
-          <a href="#">PG Diploma in Azure Data Engineering</a>
-          <a href="#">PG Diploma in Computer Science</a>
+          <a href="apex/pg-diploma-data-science-ml-ai.html">PG Diploma in Data Science, ML & AI</a>
+          <a href="apex/pg-diploma-azure-engineering.html">PG Diploma in Azure Data Engineering</a>
+          <a href="apex/pg-diploma-computer-science.html">PG Diploma in Computer Science</a>
         </div>
         <div class="nav-section">
           <h4>Master's Programs</h4>
-          <a href="#">Master's in Data Science</a>
-          <a href="#">Master's in Artificial Intelligence</a>
-          <a href="#">Master's in Cloud & Data Engineering</a>
+          <a href="apex/masters-data-science.html">Master's in Data Science</a>
+          <a href="apex/masters-artificial-intelligence.html">Master's in Artificial Intelligence</a>
+          <a href="apex/masters-cloud-data-engineering.html">Master's in Cloud & Data Engineering</a>
         </div>
         <div class="nav-section">
           <h4>Sections</h4>
-          <a href="#">Program Overview</a>
-          <a href="#">Eligibility</a>
-          <a href="#">Curriculum</a>
-          <a href="#">Research Projects</a>
-          <a href="#">Certifications</a>
-          <a href="#">Career Outcomes</a>
-          <a href="#">Admission Process</a>
-          <a href="#">FAQs</a>
+          <a href="apex/program-overview.html">Program Overview</a>
+          <a href="apex/eligibility.html">Eligibility</a>
+          <a href="apex/curriculum.html">Curriculum</a>
+          <a href="apex/research-projects.html">Research Projects</a>
+          <a href="apex/certifications.html">Certifications</a>
+          <a href="apex/career-outcomes.html">Career Outcomes</a>
+          <a href="apex/admission-process.html">Admission Process</a>
+          <a href="apex/faq.html">FAQs</a>
         </div>
       </div>
     </li>
@@ -215,102 +229,105 @@ footer{background:var(--ink);padding:4rem 5% 2.5rem;display:grid;grid-template-c
         <div class="mega-grid">
           <div class="mega-col">
             <h3>📊 Data & AI</h3>
-            <a href="#">Data Science & ML</a>
-            <a href="#">Generative AI</a>
-            <a href="#">NLP</a>
-            <a href="#">Deep Learning</a>
+            <a href="courses/data-science-ml.html">Data Science & ML</a>
+            <a href="courses/generative-ai.html">Generative AI</a>
+            <a href="courses/nlp.html">NLP</a>
+            <a href="courses/deep-learning.html">Deep Learning</a>
           </div>
           <div class="mega-col">
             <h3>☁️ Cloud & DevOps</h3>
-            <a href="#">Azure Data Engineering</a>
-            <a href="#">Azure DevOps</a>
-            <a href="#">AWS Data Engineering</a>
-            <a href="#">AWS DevOps</a>
-            <a href="#">Docker & Kubernetes</a>
+            <a href="courses/azure-data-engineering.html">Azure Data Engineering</a>
+            <a href="courses/azure-devops.html">Azure DevOps</a>
+            <a href="courses/aws-data-engineering.html">AWS Data Engineering</a>
+            <a href="courses/aws-devops.html">AWS DevOps</a>
+            <a href="courses/docker-kubernetes.html">Docker & Kubernetes</a>
           </div>
           <div class="mega-col">
             <h3>💻 Development</h3>
-            <a href="#">Full Stack Development</a>
-            <a href="#">Frontend Development</a>
-            <a href="#">Backend Development</a>
-            <a href="#">Mobile Development</a>
+            <a href="courses/full-stack-development.html">Full Stack Development</a>
+            <a href="courses/frontend-development.html">Frontend Development</a>
+            <a href="courses/backend-development.html">Backend Development</a>
+            <a href="courses/mobile-development.html">Mobile Development</a>
           </div>
         </div>
       </div>
     </li>
     <li class="nav-item">
-      <a href="#">✍️ Blog</a>
+      <a href="blog.html">✍️ Blog</a>
     </li>
     <li class="nav-item">
-      <a href="#" class="has-dropdown">📞 Contact Us</a>
+      <a href="contact-us.html" class="has-dropdown">☎️ Contact Us</a>
       <div class="nav-dropdown">
         <div class="nav-section">
-          <a href="#">Contact Form</a>
-          <a href="#">Phone & Email</a>
-          <a href="#">Office Location</a>
-          <a href="#">WhatsApp Support</a>
-          <a href="#">Book Counseling Session</a>
+          <a href="contact-us.html">Contact Form</a>
+          <a href="contact-info.html">Phone & Email</a>
+          <a href="office-locations.html">Office Location</a>
+          <a href="book-counseling.html">WhatsApp Support</a>
+          <a href="book-counseling.html">Book Counseling Session</a>
         </div>
       </div>
     </li>
   </ul>
   <div class="nav-right">
-    <a href="#" class="btn-outline">Log in</a>
-    <a href="#" class="btn-solid">Start free →</a>
+    <a href="login.html" class="btn-outline">Log in</a>
+    <a href="signup.html" class="btn-solid">Start free →</a>
   </div>
 </nav>
 
-<!-- INSTRUCTORS -->
-<section class="inst-sec" id="instructors">
-  <div style="text-align:center;max-width:560px;margin:0 auto">
-    <div class="eyebrow">World-class instructors</div>
-    <h2 class="sec-title">Learn from people who've done it</h2>
-    <p class="sec-sub" style="margin:0 auto;text-align:center">Practitioners — engineers, designers, and executives from top companies — who bring real-world insight to every lesson.</p>
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="ph-content">
+    <span class="eyebrow">🏆 FLAGSHIP PROGRAM</span>
+    <h1>Super 40: 40-Day Intensive Bootcamp</h1>
+    <p class="page-subtitle">Master industry-ready skills in 40 days. Get placed in top companies with our intensive, project-driven bootcamp designed for professionals.</p>
+    <div class="page-cta">
+      <a href="#programs" class="btn-lg">View Programs →</a>
+      <a href="book-counseling.html" class="btn-ghost-lg">Book Free Counseling</a>
+    </div>
   </div>
-  <div class="inst-grid">
-    <div class="icard">
-      <div class="iav" style="background:linear-gradient(135deg,#2563eb,#1d4ed8)">A</div>
-      <div class="iname">Arjun Sharma</div>
-      <div class="irole">ML Engineer</div>
-      <div class="ico">Ex-Google · IIT Delhi</div>
-      <div class="istats">
-        <div><div class="is-v">18K</div><div class="is-k">Students</div></div>
-        <div><div class="is-v">4.9★</div><div class="is-k">Rating</div></div>
-        <div><div class="is-v">6</div><div class="is-k">Courses</div></div>
-      </div>
+</div>
+
+<!-- CONTENT -->
+<section class="content-sec">
+  <h2>Why Super 40?</h2>
+  <p>The Super 40 Program is our most intensive and results-driven bootcamp. With a focus on real-world projects and industry partnerships, we ensure you're job-ready in just 40 days.</p>
+  
+  <div class="prog-grid" id="programs">
+    <div class="prog-card">
+      <div class="prog-icon">📊</div>
+      <h3>Data Science & AI</h3>
+      <p>Master Python, Machine Learning, and AI with real datasets.</p>
+      <a href="super-40/data-science.html">Learn More →</a>
     </div>
-    <div class="icard">
-      <div class="iav" style="background:linear-gradient(135deg,#059669,#065f46)">P</div>
-      <div class="iname">Priya Nair</div>
-      <div class="irole">Product Designer</div>
-      <div class="ico">Ex-Figma · NID Ahmedabad</div>
-      <div class="istats">
-        <div><div class="is-v">9.4K</div><div class="is-k">Students</div></div>
-        <div><div class="is-v">4.8★</div><div class="is-k">Rating</div></div>
-        <div><div class="is-v">4</div><div class="is-k">Courses</div></div>
-      </div>
+    <div class="prog-card">
+      <div class="prog-icon">⚡</div>
+      <h3>Data Engineering</h3>
+      <p>Build production-grade data pipelines and warehouses.</p>
+      <a href="super-40/data-engineering.html">Learn More →</a>
     </div>
-    <div class="icard">
-      <div class="iav" style="background:linear-gradient(135deg,#7c3aed,#5b21b6)">R</div>
-      <div class="iname">Rahul Menon</div>
-      <div class="irole">Full-Stack Dev</div>
-      <div class="ico">Ex-Atlassian · BITS Pilani</div>
-      <div class="istats">
-        <div><div class="is-v">22K</div><div class="is-k">Students</div></div>
-        <div><div class="is-v">4.9★</div><div class="is-k">Rating</div></div>
-        <div><div class="is-v">8</div><div class="is-k">Courses</div></div>
-      </div>
+    <div class="prog-card">
+      <div class="prog-icon">🤖</div>
+      <h3>Generative AI</h3>
+      <p>Work with LLMs, GPT, and build AI-powered applications.</p>
+      <a href="super-40/generative-ai.html">Learn More →</a>
     </div>
-    <div class="icard">
-      <div class="iav" style="background:linear-gradient(135deg,#d97706,#92400e)">S</div>
-      <div class="iname">Sneha Kapoor</div>
-      <div class="irole">Data Scientist</div>
-      <div class="ico">Ex-Amazon · IIM Bengaluru</div>
-      <div class="istats">
-        <div><div class="is-v">11K</div><div class="is-k">Students</div></div>
-        <div><div class="is-v">4.8★</div><div class="is-k">Rating</div></div>
-        <div><div class="is-v">5</div><div class="is-k">Courses</div></div>
-      </div>
+    <div class="prog-card">
+      <div class="prog-icon">🦾</div>
+      <h3>Agentic AI</h3>
+      <p>Create autonomous agents and intelligent systems.</p>
+      <a href="super-40/agentic-ai.html">Learn More →</a>
+    </div>
+    <div class="prog-card">
+      <div class="prog-icon">☁️</div>
+      <h3>Azure Programs</h3>
+      <p>Azure Data Engineering and DevOps certifications.</p>
+      <a href="super-40/azure-data-engineering.html">Learn More →</a>
+    </div>
+    <div class="prog-card">
+      <div class="prog-icon">⛅</div>
+      <h3>AWS Programs</h3>
+      <p>AWS Data Engineering and DevOps expertise.</p>
+      <a href="super-40/aws-data-engineering.html">Learn More →</a>
     </div>
   </div>
 </section>
@@ -319,67 +336,65 @@ footer{background:var(--ink);padding:4rem 5% 2.5rem;display:grid;grid-template-c
 <footer>
   <div>
     <a href="index.html" class="ft-logo">Edu<span>kron</span></a>
-    <p class="ft-tag">Learn beyond limits. Build skills that matter. Launch a career you love.</p>
+    <p class="ft-tag">Transforming tech education with industry-focused bootcamps and upskilling programs.</p>
     <div class="social-row">
-      <a href="https://www.youtube.com/@edukron" class="soc" target="_blank">📺</a>
-      <a href="https://www.instagram.com/edukron" class="soc" target="_blank">📷</a>
-      <a href="https://www.linkedin.com/company/edukron" class="soc" target="_blank">💼</a>
-      <a href="https://www.facebook.com/edukron" class="soc" target="_blank">📘</a>
+      <a href="https://www.youtube.com/@edukron" target="_blank" class="soc">📺</a>
+      <a href="https://www.instagram.com/edukron" target="_blank" class="soc">📷</a>
+      <a href="https://www.linkedin.com/company/edukron" target="_blank" class="soc">💼</a>
+      <a href="https://www.facebook.com/edukron" target="_blank" class="soc">📘</a>
     </div>
   </div>
   <div class="ft-col">
-    <h4>Learn</h4>
+    <h4>Programs</h4>
     <ul class="ft-links">
-      <li><a href="courses.html">All courses</a></li>
-      <li><a href="#">Learning paths</a></li>
-      <li><a href="#">Certifications</a></li>
-      <li><a href="#">Live classes</a></li>
-      <li><a href="#">Free resources</a></li>
+      <li><a href="super-40.html">Super 40</a></li>
+      <li><a href="edukron-apex.html">Edukron Apex</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="blog.html">Blog</a></li>
     </ul>
   </div>
   <div class="ft-col">
     <h4>Company</h4>
     <ul class="ft-links">
-      <li><a href="#">About Edukron</a></li>
-      <li><a href="instructors.html">Instructors</a></li>
-      <li><a href="#">Careers</a></li>
-      <li><a href="#">Press kit</a></li>
-      <li><a href="#">Blog</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="features.html">Features</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact-us.html">Contact</a></li>
     </ul>
   </div>
   <div class="ft-col">
-    <h4>For business</h4>
+    <h4>Resources</h4>
     <ul class="ft-links">
-      <li><a href="pricing.html">Enterprise</a></li>
-      <li><a href="#">Become an instructor</a></li>
-      <li><a href="#">Hiring partners</a></li>
-      <li><a href="#">API &amp; integrations</a></li>
+      <li><a href="#">Documentation</a></li>
+      <li><a href="#">Tutorials</a></li>
+      <li><a href="#">Community</a></li>
+      <li><a href="#">Support</a></li>
     </ul>
   </div>
   <div class="ft-col">
-    <h4>Support</h4>
+    <h4>Legal</h4>
     <ul class="ft-links">
-      <li><a href="faq.html">Help centre</a></li>
-      <li><a href="#">Community forum</a></li>
-      <li><a href="#">Contact us</a></li>
-      <li><a href="#">System status</a></li>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Terms</a></li>
+      <li><a href="#">Cookies</a></li>
+      <li><a href="#">Disclaimer</a></li>
     </ul>
   </div>
   <div class="ft-bot">
-    <span class="ft-copy">© 2026 Edukron Technologies Pvt. Ltd. · Made in Bengaluru 🇮🇳</span>
+    <p class="ft-copy">© 2026 Edukron. All rights reserved.</p>
     <div class="ft-legal">
       <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Use</a>
-      <a href="#">Cookie Settings</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Cookie Policy</a>
     </div>
   </div>
 </footer>
 
 <!-- STICKY CTA -->
-<a href="#" class="sticky-cta">Enroll Now →</a>
+<a href="book-counseling.html" class="sticky-cta">Enroll Now →</a>
 
 <!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/91XXXXXXXXXX" class="floating-whatsapp" target="_blank">💬</a>
+<a href="https://wa.me/919999999999" target="_blank" class="floating-whatsapp">💬</a>
 
 </body>
 </html>
